@@ -1,2 +1,5 @@
 -r requirements/requirements-api.txt
 -r requirements/requirements-ui.txt
+ruff==0.2.1
+pytest==8.0.0
+httpx==0.25.1

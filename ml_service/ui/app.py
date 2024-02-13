@@ -1,7 +1,6 @@
 import requests
 import streamlit as st
 
-
 st.title("Iris classification model")
 
 st.markdown("List iris characteristics:")
@@ -18,6 +17,6 @@ if st.button("Predict"):
             "sepal_height": sepal_height,
             "petal_width": petal_width,
             "petal_height": petal_height,
-        }
+        },
     )
     st.success(f"This iris is {response.text}.")

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import load_iris
+from sklearn.linear_model import LogisticRegression
 
 data = load_iris()
 X = data["data"]
@@ -19,7 +19,5 @@ def predict(
     sepal_height: float,
     sepal_width: float,
 ):
-    predict = model.predict(
-        [[sepal_width, sepal_height, petal_width, petal_height]]
-    )
+    predict = model.predict([[sepal_width, sepal_height, petal_width, petal_height]])
     return data["target_names"][predict][0]
